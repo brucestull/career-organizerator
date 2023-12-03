@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ the_site_name }}
+    -
+    {{ page_title }}
+{% endblock title %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+
+<form method="post" action="/career-organizerator/skills/">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Skill</button>
+</form>
+
+<ul>
+    {% for skill in skill_list %}
+        <li>
+            <p>{{ skill.name }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ the_site_name }}
+    -
+    {{ page_title }}
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ page_title }}</h1>
+    <h2>Links</h2>
+    {% if request.user.registration_accepted %}
+        <p>
+            <a
+                href="{% url 'app_tracker:organizational-concepts' %}"
+                >
+                Organizational Concepts
+            </a>
+        </p>
+    {% endif %}
+{% endblock content %}
