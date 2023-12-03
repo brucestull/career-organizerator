@@ -1,26 +1,5 @@
 # Useful Commands and Links
 
-## Development server web links
-
-* Applications:
-  * <http://localhost:8000/journals/list/>
-  * [HTML](http://localhost:8000/valued-goals/html/)
-  * [Goals](http://localhost:8000/valued-goals/goals/)
-  * [Goals Create](http://localhost:8000/valued-goals/goals/create/)
-  * [App Tracker](http://localhost:8000/app-tracker/)
-* Create user:
-  * <http://localhost:8000/accounts/signup/>
-* Server Root:
-  * <http://localhost:8000/>
-* Django Admin:
-  * <http://localhost:8000/admin/>
-* Django Admin Documentation:
-  * <http://localhost:8000/admin/doc/>
-  * <http://localhost:8000/admin/doc/tags/>
-  * <http://localhost:8000/admin/doc/filters/>
-  * <http://localhost:8000/admin/doc/models/>
-  * <http://localhost:8000/admin/doc/models/auth.user/>
-
 ## Commands
 
 ### This Project
@@ -59,6 +38,9 @@
 * `python manage.py createsuperuser`
 * `python manage.py createsuperuser --email admin@email.app --username admin`
 * `python manage.py createsuperuser --email FlynntKnapp@email.app --username FlynntKnapp`
+
+### Django Shell
+
 * `python manage.py shell`
   ```python
   from django.conf import settings as s
@@ -71,8 +53,10 @@
 ### Django Create `SECRET_KEY`
 
 * `python manage.py shell`
-* `from django.core.management.utils import get_random_secret_key`
-* `print(get_random_secret_key())`
+  ```python
+  from django.core.management.utils import get_random_secret_key
+  print(get_random_secret_key())
+  ```
 
 ### Heroku
 
@@ -85,22 +69,17 @@
 ### PowerShell
 
 * `Get-Command python | Format-List *`
+  * Display all properties of the `python` command.
 
 ### Misc
 
 * `tree /f /a`
+  * Display the directory tree of the current directory.
 
 ### Git
 
 * `git remote -v`
-
-## Production deployment links
-
-* Dashboard:
-* Server Root:
-* Create user:
-* Django Admin:
-* Django Admin Documentation:
+  * Display the current remote repository(ies).
 
 ## Repository Links
 
