@@ -22,6 +22,8 @@ load_dotenv()
 # Loads variables from .env.email, and possibly overwrites variables from .env
 load_dotenv(".env.email")
 
+THE_SITE_NAME = "Career Organizerator"
+
 # Get the value of the ENVIRONMENT environment variable, or use a default
 # value of "development" if it's not set
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "development")
@@ -148,8 +150,6 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
-
-THE_SITE_NAME = "Personal Assistant"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

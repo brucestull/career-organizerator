@@ -40,7 +40,7 @@ class HomeViewTest(TestCase):
         """
         response = self.client.get(reverse("cbt:home"))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Cognitive Behavioral Therapy")
 
 
@@ -121,7 +121,7 @@ class CognitiveDistortionListViewTest(TestCase):
         self.client.login(username="RegisteredDezzi", password="MeowMeow42")
         response = self.client.get(reverse("cbt:cognitive-distortion-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Cognitive Distortions")
         self.assertIn("cognitivedistortion_list", response.context)
         self.assertIn("object_list", response.context)
@@ -198,7 +198,7 @@ class ThoughtListViewTest(TestCase):
         self.client.login(username="RegisteredDezzi", password="MeowMeow42")
         response = self.client.get(reverse("cbt:thought-list"))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Thoughts")
         self.assertIn("thought_list", response.context)
         self.assertIn("object_list", response.context)
@@ -294,7 +294,7 @@ class ThoughtCreateViewTest(TestCase):
         self.client.login(username="RegisteredDezzi", password="MeowMeow42")
         response = self.client.get(reverse("cbt:thought-create"))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Create a Thought")
         self.assertIn("form", response.context)
 
@@ -463,7 +463,7 @@ class ThoughtDetailViewTest(TestCase):
             )
         )
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Thought")
         self.assertIn("thought", response.context)
         self.assertIn("object", response.context)

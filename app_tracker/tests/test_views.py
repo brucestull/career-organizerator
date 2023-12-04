@@ -40,5 +40,5 @@ class HomeViewTest(TestCase):
         """
         response = self.client.get(reverse("app_tracker:home"))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "App Tracker Home")
