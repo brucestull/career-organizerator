@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     "self_enquiry.apps.SelfEnquiryConfig",
     "vitals.apps.VitalsConfig",
     "app_tracker.apps.AppTrackerConfig",
-    "cbt.apps.CbtConfig",
     "career_organizerator.apps.CareerOrganizeratorConfig",
     "pharma_tracker.apps.PharmaTrackerConfig",
 ]
