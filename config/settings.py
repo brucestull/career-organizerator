@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     "vitals.apps.VitalsConfig",
     "app_tracker.apps.AppTrackerConfig",
     "career_organizerator.apps.CareerOrganizeratorConfig",
-    "pharma_tracker.apps.PharmaTrackerConfig",
 ]
 
 MIDDLEWARE = [
