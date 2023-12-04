@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.admindocs",
-    "vitals.apps.VitalsConfig",
     "app_tracker.apps.AppTrackerConfig",
     "career_organizerator.apps.CareerOrganizeratorConfig",
 ]
