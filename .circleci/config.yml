@@ -62,3 +62,9 @@ workflows:
   build_then_deploy:
     jobs:
       - build_and_test
+      - deploy:
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only: main
