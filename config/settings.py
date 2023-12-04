@@ -22,6 +22,8 @@ load_dotenv()
 # Loads variables from .env.email, and possibly overwrites variables from .env
 load_dotenv(".env.email")
 
+THE_SITE_NAME = "Personal Assistant"
+
 # Get the value of the ENVIRONMENT environment variable, or use a default
 # value of "development" if it's not set
 ENVIRONMENT = os.environ.get("ENVIRONMENT", "development")
@@ -170,7 +172,8 @@ if ENVIRONMENT == "production":
             "PASSWORD": database_config_variables["DATABASE_PASSWORD"],
         }
     }
-    ALLOWED_HOSTS = ["flynnt-knapp-8e0b83ab9b88.herokuapp.com"]
+    THIS_HOST = os.environ.get("THIS_HOST")
+    ALLOWED_HOSTS = [THIS_HOST]
     SECRET_KEY = os.environ.get("SECRET_KEY")
     STATIC_ROOT = BASE_DIR / "staticfiles"
 else:
