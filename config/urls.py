@@ -33,10 +33,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
-    path("journals/", include("self_enquiry.urls")),
-    path("vitals/", include("vitals.urls")),
     path("app-tracker/", include("app_tracker.urls")),
-    path("cbt/", include("cbt.urls")),
-    path("pharma-tracker/", include("pharma_tracker.urls")),
     path("career-organizerator/", include("career_organizerator.urls")),
 ]
