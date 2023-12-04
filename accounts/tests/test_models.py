@@ -2,13 +2,6 @@ from django.test import TestCase
 
 from accounts.models import CustomUser
 
-A_TEST_USERNAME = "ACustomUser"
-ANOTHER_TEST_USERNAME = "AnotherCustomUser"
-
-CUSTOM_USER_REGISTRATION_ACCEPTED_HELP_TEXT = (
-    "Designates whether this user's registration has been accepted."
-)
-
 
 class CustomUserModelTest(TestCase):
     """
@@ -23,7 +16,9 @@ class CustomUserModelTest(TestCase):
         This specific function name `setUpTestData` is required by Django.
         """
         cls.user = CustomUser.objects.create(
-            username=A_TEST_USERNAME,
+            username="UnRegisteredBunBun",
+            password="MeowMeow42",
+            email="UnRegisteredBunBun@purr.scratch",
         )
 
     def test_registration_accepted_default_attribute_false(self):
@@ -67,7 +62,7 @@ class CustomUserModelTest(TestCase):
             user._meta.get_field(
                 "registration_accepted",
             ).help_text,
-            CUSTOM_USER_REGISTRATION_ACCEPTED_HELP_TEXT,
+            "Designates whether this user's registration has been accepted.",
         )
 
     def test_dunder_string_method(self):
