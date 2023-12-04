@@ -1,5 +1,7 @@
 # Career Organizerator
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/Y1ZCzLfk7VvFxn1NaACyjS/N4Wc2sDkc5gDdCt4rVcKes/tree/main.svg?style=shield&circle-token=b076decd65e97a21fef7b44b7866709d969e7181)](https://dl.circleci.com/status-badge/redirect/circleci/Y1ZCzLfk7VvFxn1NaACyjS/N4Wc2sDkc5gDdCt4rVcKes/tree/main)
+
 ## Introduction
 A brief description of what the application does and the problem it solves. Include a couple of key features or benefits.
 
