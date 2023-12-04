@@ -12,7 +12,7 @@ ANOTHER_TEST_USERNAME = "AnotherCustomUser"
 ANOTHER_TEST_PASSWORD = "another_test_password"
 ANOTHER_TEST_FIRST_NAME = "Another"
 
-THE_SITE_NAME = "Personal Assistant"
+THE_SITE_NAME = "Career Organizerator"
 
 FORBIDDEN_VIEW_PAGE_TITLE = "Forbidden"
 FORBIDDEN_VIEW_URL = "/accounts/403/"
@@ -68,9 +68,7 @@ class TestForbiddenView(TestCase):
         """
         response = self.client.get(FORBIDDEN_VIEW_URL)
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(
-            response.context["page_title"], FORBIDDEN_VIEW_PAGE_TITLE
-        )
+        self.assertEqual(response.context["page_title"], FORBIDDEN_VIEW_PAGE_TITLE)
 
     def test_context_has_correct_the_site_name(self):
         """

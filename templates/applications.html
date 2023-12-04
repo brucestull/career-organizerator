@@ -1,7 +1,7 @@
 {% block content %}
 <h3>Applications</h3>
 <ul>
-    <li><a href="{% url 'home' %}">Personal Assistant</a></li>
+    <li><a href="{% url 'home' %}">Project Home</a></li>
     <li><a href={% url "app_tracker:home" %}>App Tracker</a></li>
     <li>
         <a href={% url "career_organizerator:home" %}>Career Organizerator</a>
@@ -13,18 +13,6 @@
         <a href={% url 'career_organizerator:question-response-list' %}>Question Responses</a>
         |
         <a href={% url 'career_organizerator:bulletpoint-list' %}>Bullet Points</a>
-    </li>
-        {% comment %} <li><a href={% url "vitals:home" %}>Vitals</a></li> {% endcomment %}
-    <li><a href={% url "vitals:bloodpressure-list" %}>Blood Pressures</a></li>
-    <li><a href={% url "self_enquiry:list" %}>Self Enquiry</a></li>
-    <li>
-        CBT
-        |
-        <a href={% url "cbt:cognitive-distortion-list" %}>Cognitive Distortions</a>
-        |
-        <a href={% url "cbt:thought-list" %}>Thoughts</a>
-        |
-        <a href={% url "cbt:thought-create" %}>Create New Thought</a>
     </li>
 </ul>
 

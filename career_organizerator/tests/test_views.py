@@ -35,7 +35,7 @@ class HomeViewTests(TestCase):
         Test that the `home` view passes the correct context to the template.
         """
         response = self.client.get(reverse_lazy("career_organizerator:home"))
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Career Organizerator Home")
 
 
@@ -94,7 +94,7 @@ class PurposeListViewTests(TestCase):
         # Check that the response is 200 OK.
         self.assertEqual(response.status_code, 200)
         # Check that the response contains the correct context.
-        self.assertEqual(response.context["the_site_name"], "Personal Assistant")
+        self.assertEqual(response.context["the_site_name"], "Career Organizerator")
         self.assertEqual(response.context["page_title"], "Purposes")
         # Check that the response contains the correct template.
         self.assertTemplateUsed(response, "career_organizerator/purpose_list.html")

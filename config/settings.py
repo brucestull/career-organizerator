@@ -22,7 +22,7 @@ load_dotenv()
 # Loads variables from .env.email, and possibly overwrites variables from .env
 load_dotenv(".env.email")
 
-THE_SITE_NAME = "Personal Assistant"
+THE_SITE_NAME = "Career Organizerator"
 
 # Get the value of the ENVIRONMENT environment variable, or use a default
 # value of "development" if it's not set
@@ -55,12 +55,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.admindocs",
-    "self_enquiry.apps.SelfEnquiryConfig",
-    "vitals.apps.VitalsConfig",
     "app_tracker.apps.AppTrackerConfig",
-    "cbt.apps.CbtConfig",
     "career_organizerator.apps.CareerOrganizeratorConfig",
-    "pharma_tracker.apps.PharmaTrackerConfig",
 ]
 
 MIDDLEWARE = [
@@ -150,8 +146,6 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
-
-THE_SITE_NAME = "Personal Assistant"
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
